@@ -1,0 +1,2294 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/0ef94479b1fc7c18041d6bbf1a8cfbfa321edc0a/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>QA - Automation report</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ATG/Web Order Creation - Dev2</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>May 12, 2017 01:30:09 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='warning'><a href='#!'>Warning <i class='material-icons orange-text'>warning</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='53.846%'><span class='strong'>14</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='46.154%'>12</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='17.308%'><span class='strong'>27</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='82.692%'>129</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 9, 2017 04:38:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 9, 2017 04:38:52 PM</span>
+	<span class='label end-time'>May 9, 2017 04:41:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 2s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:39:41 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:41:25 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:41:38 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:41:53 PM</td>
+					<td class='step-details'>Order#: EXPR149080003 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:41:54 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 10:30:23 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 10:30:23 AM</span>
+	<span class='label end-time'>May 10, 2017 10:33:11 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 48s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:31:13 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:32:42 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:32:54 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:33:10 AM</td>
+					<td class='step-details'>Order#: EXPR149120000 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:33:11 AM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 11:30:07 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 11:30:07 AM</span>
+	<span class='label end-time'>May 10, 2017 11:32:57 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 50s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:31:00 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:32:25 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:32:33 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:32:43 AM</td>
+					<td class='step-details'>Order#: EXPR149120009 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:32:57 AM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 11:45:26 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 11:45:26 AM</span>
+	<span class='label end-time'>May 10, 2017 11:46:10 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:46:10 AM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 11:46:50 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 11:46:50 AM</span>
+	<span class='label end-time'>May 10, 2017 11:52:15 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 25s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:47:42 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:49:32 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:50:26 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:51:51 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:51:58 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:52:11 AM</td>
+					<td class='step-details'>Order#: EXPR149120014 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:52:15 AM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 12:13:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 12:13:35 PM</span>
+	<span class='label end-time'>May 10, 2017 12:17:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 51s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:14:29 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:15:56 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:16:04 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:16:14 PM</td>
+					<td class='step-details'>Order#: EXPR149120019 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:17:26 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 12:20:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 12:20:09 PM</span>
+	<span class='label end-time'>May 10, 2017 12:25:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 13s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:21:02 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:22:46 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:23:35 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:24:58 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:06 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:25:16 PM</td>
+					<td class='step-details'>Order#: EXPR149120021 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:25:22 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 12:28:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 12:28:35 PM</span>
+	<span class='label end-time'>May 10, 2017 12:32:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 36s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:33 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:24 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:47 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:55 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:08 PM</td>
+					<td class='step-details'>Order#: EXPR149120028 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:11 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 12:34:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 12:34:29 PM</span>
+	<span class='label end-time'>May 10, 2017 12:37:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 38s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:35:19 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:36:10 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:07 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 01:30:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 01:30:19 PM</span>
+	<span class='label end-time'>May 10, 2017 01:33:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 14s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:31:08 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:31:55 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:14 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:22 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:32 PM</td>
+					<td class='step-details'>Order#: EXPR149120036 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:33 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 01:53:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 01:53:50 PM</span>
+	<span class='label end-time'>May 10, 2017 01:55:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 35s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:18 PM</td>
+					<td class='step-details'>item not found - 91327611</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:21 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:46 PM</td>
+					<td class='step-details'>item not found - 91327527</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:49 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:15 PM</td>
+					<td class='step-details'>item not found - 91327527</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:25 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 02:48:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 02:48:51 PM</span>
+	<span class='label end-time'>May 10, 2017 02:50:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 42s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:49:19 PM</td>
+					<td class='step-details'>item not found - 91327611</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:49:24 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:49:50 PM</td>
+					<td class='step-details'>item not found - 91327527</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:49:56 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:50:22 PM</td>
+					<td class='step-details'>item not found - 91327527</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:50:33 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 03:01:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 03:01:30 PM</span>
+	<span class='label end-time'>May 10, 2017 03:03:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 41s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:01:57 PM</td>
+					<td class='step-details'>item not found - 91327611</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:02 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:27 PM</td>
+					<td class='step-details'>item not found - 91327527</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:02:35 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:01 PM</td>
+					<td class='step-details'>item not found - 91327527</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:03:11 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 04:05:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 04:05:56 PM</span>
+	<span class='label end-time'>May 10, 2017 04:10:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 18s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:06:47 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:07:35 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:09:19 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:09:32 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:09:44 PM</td>
+					<td class='step-details'>Order#: EXPR149180002 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:10:14 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 04:52:42 PM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 04:52:42 PM</span>
+	<span class='label end-time'>May 10, 2017 04:53:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>4:53:26 PM</td>
+					<td class='step-details'><span class="label white-text blue">Insert the path here&gt;</span></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>4:53:26 PM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 10, 2017 05:03:16 PM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2017 05:03:16 PM</span>
+	<span class='label end-time'>May 10, 2017 05:06:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 31s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>5:04:08 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>5:05:00 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>5:06:25 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>5:06:33 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:06:44 PM</td>
+					<td class='step-details'>Order#: EXPR149180018 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>5:06:47 PM</td>
+					<td class='step-details'><span class="label white-text blue">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>5:06:47 PM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>null</td> 
+   <td>EXPR149180018</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 09:11:47 AM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 09:11:47 AM</span>
+	<span class='label end-time'>May 11, 2017 09:15:03 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 16s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:12:36 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:13:23 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:14:44 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:14:52 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>9:15:02 AM</td>
+					<td class='step-details'>Order#: EXPR149180053 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:15:03 AM</td>
+					<td class='step-details'><span class="label white-text blue">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>9:15:03 AM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>null</td> 
+   <td>EXPR149180053</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 09:37:46 AM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 09:37:46 AM</span>
+	<span class='label end-time'>May 11, 2017 09:41:04 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 18s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:38:34 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:39:21 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:40:43 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:40:52 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>9:41:03 AM</td>
+					<td class='step-details'>Order#: EXPR149180055 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:41:04 AM</td>
+					<td class='step-details'><span class="label white-text blue"> 
+ <href>
+   FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx 
+ </href></span></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>9:41:04 AM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>com.aventstack.extentreports.markuputils.Label@4fa1c212</td> 
+   <td>Customer Order Number</td> 
+  </tr> 
+  <tr> 
+   <td>1</td> 
+   <td>EXPR149180055</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 09:57:29 AM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 09:57:29 AM</span>
+	<span class='label end-time'>May 11, 2017 10:00:46 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 17s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:58:18 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>9:59:06 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:00:26 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:00:34 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:00:45 AM</td>
+					<td class='step-details'>Order#: EXPR149180062 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:00:46 AM</td>
+					<td class='step-details'><span class="label white-text blue"><a>FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</a></span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:00:46 AM</td>
+					<td class='step-details'>Output File Path: <a>FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</a></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>10:00:46 AM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>com.aventstack.extentreports.markuputils.Label@4fa1c212</td> 
+   <td>Customer Order Number</td> 
+  </tr> 
+  <tr> 
+   <td>1</td> 
+   <td>EXPR149180062</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 10:30:19 AM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 10:30:19 AM</span>
+	<span class='label end-time'>May 11, 2017 10:33:31 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 12s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:31:07 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:31:54 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:33:12 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:33:20 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:33:30 AM</td>
+					<td class='step-details'>Order#: EXPR149180065 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:33:31 AM</td>
+					<td class='step-details'><span class="label white-text orange">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:33:31 AM</td>
+					<td class='step-details'>Output File Path: <a>FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</a></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>10:33:31 AM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>com.aventstack.extentreports.markuputils.Label@7139992f</td> 
+   <td>Customer Order Number</td> 
+  </tr> 
+  <tr> 
+   <td>1</td> 
+   <td>EXPR149180065</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 01:30:22 PM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 01:30:22 PM</span>
+	<span class='label end-time'>May 11, 2017 01:33:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 33s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:31:15 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:32:02 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:30 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:41 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:54 PM</td>
+					<td class='step-details'>Order#: EXPR149210002 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:55 PM</td>
+					<td class='step-details'><span class="label white-text orange">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:55 PM</td>
+					<td class='step-details'>Output File Path: 
+<href>
+  FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx 
+</href></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>1:33:55 PM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>Serial#</td> 
+   <td>Customer Order Number</td> 
+  </tr> 
+  <tr> 
+   <td>1</td> 
+   <td>EXPR149210002</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 03:06:10 PM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 03:06:10 PM</span>
+	<span class='label end-time'>May 11, 2017 03:10:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 55s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:07:21 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:08:14 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:09:39 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:09:48 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:10:00 PM</td>
+					<td class='step-details'>Order#: EXPR149210021 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:10:05 PM</td>
+					<td class='step-details'><span class="label white-text orange">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:10:05 PM</td>
+					<td class='step-details'>Output File Path: 
+<href>
+  FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx 
+</href></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:10:05 PM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>Serial#</td> 
+   <td>Customer Order Number</td> 
+  </tr> 
+  <tr> 
+   <td>1</td> 
+   <td>EXPR149210021</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 03:36:12 PM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 03:36:12 PM</span>
+	<span class='label end-time'>May 11, 2017 03:36:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 45s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:36:57 PM</td>
+					<td class='step-details'><span class="label white-text orange">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:36:57 PM</td>
+					<td class='step-details'>Output File Path: 
+<href>
+  FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx 
+</href></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:36:57 PM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>Serial#</td> 
+   <td>Customer Order Number</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 11, 2017 03:37:29 PM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 11, 2017 03:37:29 PM</span>
+	<span class='label end-time'>May 11, 2017 03:41:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 34s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:38:18 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:39:07 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:40:29 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:40:37 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:41:00 PM</td>
+					<td class='step-details'>Order#: EXPR149210026 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>3:41:03 PM</td>
+					<td class='step-details'><span class="label white-text orange">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:41:03 PM</td>
+					<td class='step-details'>Output File Path: 
+<href>
+  FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx 
+</href></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>3:41:03 PM</td>
+					<td class='step-details'><table> 
+ <tbody> 
+  <tr> 
+   <td>Serial#</td> 
+   <td>Customer Order Number</td> 
+  </tr> 
+  <tr> 
+   <td>1</td> 
+   <td>EXPR149210026</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+  <tr> 
+   <td>null</td> 
+   <td>null</td> 
+  </tr> 
+ </tbody> 
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items &amp; Checkout</span>
+						<span class='test-time'>May 12, 2017 10:31:20 AM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 12, 2017 10:31:20 AM</span>
+	<span class='label end-time'>May 12, 2017 10:34:31 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 11s+0ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart &amp; checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:32:07 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:32:54 AM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:34:13 AM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:34:21 AM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:34:31 AM</td>
+					<td class='step-details'>Order#: EXPR149260039 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>10:34:31 AM</td>
+					<td class='step-details'><span class="label white-text orange">FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:34:31 AM</td>
+					<td class='step-details'>Output File Path: 
+<href>
+ FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx
+</href></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>10:34:31 AM</td>
+					<td class='step-details'><table>
+ <tbody>
+  <tr>
+   <td>Serial#</td>
+   <td>Customer Order Number</td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td>EXPR149260039</td>
+  </tr>
+  <tr>
+   <td>null</td>
+   <td>null</td>
+  </tr>
+  <tr>
+   <td>null</td>
+   <td>null</td>
+  </tr>
+  <tr>
+   <td>null</td>
+   <td>null</td>
+  </tr>
+ </tbody>
+</table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  warning' status='warning' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Create Order - Add items & Checkout</span>
+						<span class='test-time'>May 12, 2017 01:30:20 PM</span>
+						<span class='test-status right warning'>warning</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 12, 2017 01:30:20 PM</span>
+	<span class='label end-time'>May 12, 2017 01:33:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 13s+615ms</span>
+</div>
+	<div class='test-desc'>Add items to the cart & checkout </div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:31:09 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:31:57 PM</td>
+					<td class='step-details'>Adding remaining items to the cart</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:15 PM</td>
+					<td class='step-details'>Customer details have been successfully entered</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:23 PM</td>
+					<td class='step-details'>Payment details have been entered</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:33 PM</td>
+					<td class='step-details'>Order#: EXPR149290027 has been successfully created</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:33:34 PM</td>
+					<td class='step-details'><span class='label white-text orange'>FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</span></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:33:34 PM</td>
+					<td class='step-details'>Output File Path: <href>FILE://cmhfiler1/express_public/OMS%20Testing/Hemaraj/Automation/TestDataFiles/TestDataFile.xlsx</href></td>
+				</tr>
+				<tr class='log' status='warning'>
+					<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+					<td class='timestamp'>1:33:34 PM</td>
+					<td class='step-details'><table><tr><td>Serial#</td><td>Customer Order Number</td></tr><tr><td>1</td><td>EXPR149290027</td></tr><tr><td>null</td><td>null</td></tr><tr><td>null</td><td>null</td></tr><tr><td>null</td><td>null</td></tr></table></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='../Screenshots/orders.WebOrder_Add_items_and_Checkout_PASS.png' width='10%' src='' data-src='../Screenshots/orders.WebOrder_Add_items_and_Checkout_PASS.png'></li>
+							</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>26</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>156</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 12, 2017 01:30:09 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 12, 2017 01:33:34 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>204,717ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 14,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 12,
+				skipParent: 0,
+				exceptionsParent: 12,
+				
+				passChild: 27,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 12,
+				skipChild: 0,
+				infoChild: 117,
+				exceptionsChild: 12,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/29d2d3ec024c953e6341cb3e19e31b1035a8f556/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

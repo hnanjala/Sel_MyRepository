@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="112123" started-at="2017-10-27T19:01:02Z" finished-at="2017-10-27T19:02:54Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="112123" started-at="2017-10-27T19:01:02Z" finished-at="2017-10-27T19:02:54Z">
+      <class name="orders.WebOrder">
+        <test-method status="PASS" signature="Open_NewBrowser_Window_And_Launch_PPS()[pri:0, instance:orders.WebOrder@1460a8c0]" name="Open_NewBrowser_Window_And_Launch_PPS" is-config="true" duration-ms="47474" started-at="2017-10-27T15:01:02Z" finished-at="2017-10-27T15:01:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open_NewBrowser_Window_And_Launch_PPS -->
+        <test-method status="PASS" signature="Add_items_and_Checkout()[pri:0, instance:orders.WebOrder@1460a8c0]" name="Add_items_and_Checkout" duration-ms="61211" started-at="2017-10-27T15:01:49Z" finished-at="2017-10-27T15:02:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_items_and_Checkout -->
+        <test-method status="PASS" signature="Capture_Screenshot(org.testng.ITestResult)[pri:0, instance:orders.WebOrder@1460a8c0]" name="Capture_Screenshot" is-config="true" duration-ms="441" started-at="2017-10-27T15:02:50Z" finished-at="2017-10-27T15:02:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Add_items_and_Checkout status=SUCCESS method=WebOrder.Add_items_and_Checkout()[pri:0, instance:orders.WebOrder@1460a8c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Capture_Screenshot -->
+        <test-method status="PASS" signature="Close_Browser()[pri:0, instance:orders.WebOrder@1460a8c0]" name="Close_Browser" is-config="true" duration-ms="2980" started-at="2017-10-27T15:02:51Z" finished-at="2017-10-27T15:02:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close_Browser -->
+      </class> <!-- orders.WebOrder -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
