@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>
         <class name="orders.WebOrder"/> 
-        <class name="orders.CsrOrder_234"/> 
+        <class name="orders.CsrOrder"/> 
      </classes>
   </test> <!-- Test -->
 
